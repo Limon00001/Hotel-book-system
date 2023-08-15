@@ -1,22 +1,31 @@
-<div class="container-fluid bg-white mt-5">
+<div class="container-fluid bg-white mt-5 px-5 py-2">
     <div class="row">
-        <div class="col-lg-4">
-            <h3 class="fw-bold fs-3 mb-2">Hotel</h3>
-            <p>Pioneering network optimization that improves speed, reduces latency and congestion – along with full visibility.</p>
+        <div class="col-lg-6 p-4">
+            <h3 class="h-font fw-bold fs-3 mb-2">Hotel Book</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quis ipsam asperiores laudantium
+                fugiat, beatae, earum repellat atque temporibus dolorem laboriosam, maxime obcaecati esse neque
+                ratione quos eos necessitatibus eaque rem.</p>
         </div>
-        <div class="col-lg-4">
-            <h5 class="mb-3">Links</h5>
-            <a href="#" class="d-inline-block text-dark text-decoration-none">Home</a> <br>
-            <a href="#" class="d-inline-block text-dark text-decoration-none">Rooms</a> <br>
-            <a href="#" class="d-inline-block text-dark text-decoration-none">Contact Us</a> <br>
-            <a href="#" class="d-inline-block text-dark text-decoration-none">About</a>
+        <div class="col-lg-3 p-4">
+            <h5 class="mb3">Links</h3>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a><br>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Rooms</a><br>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Contact Us</a><br>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">About</a><br>
         </div>
-        <div class="col-lg-4">
-            <h5 class="mb-3">Follow us</h5>
-            <a href="#" class="d-inline-block text-dark text-decoration-none mb-2"><i class="fa-brands fa-twitter"></i> Twitter</a> <br>
-            <a href="#" class="d-inline-block text-dark text-decoration-none mb-2"><i class="fa-brands fa-facebook"></i> Facebook</a> <br>
-            <a href="#" class="d-inline-block text-dark text-decoration-none mb-2"><i class="fa-brands fa-instagram"></i> Instagram</a> <br>
-            <a href="#" class="d-inline-block text-dark text-decoration-none mb-4"><i class="fa-brands fa-linkedin"></i> Linked In</a>
+        <div class="col-lg-3 p-4">
+            <h5 class="mb-3">Follow Us</h3>
+                <a class="d-inline-block mb-2 text-dark text-decoration-none me-1" href="#">
+                    <i class="bi bi-twitter me-1"></i>Twitter
+                </a>
+                <br>
+                <a class="d-inline-block mb-2 text-dark text-decoration-none me-1" href="#">
+                    <i class="bi bi-facebook me-1"></i>Facebook
+                </a>
+                <br>
+                <a class="d-inline-block  text-dark text-decoration-none me-1" href="#">
+                    <i class="bi bi-instagram me-1"></i>Instagram
+                </a>
         </div>
     </div>
 </div>

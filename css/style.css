@@ -22,3 +22,16 @@ input::-webkit-inner-spin-button {
 input[type="number"] {
   -moz-appearance: textfield;
 }
+
+.roomAvailable{
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+}
+
+@media screen and (max-width:600px) {
+  .roomAvailable{
+      margin-top: 20px;
+      padding: 0 2rem;
+  }
+}
