@@ -76,7 +76,7 @@
             <div class="col-lg-12 bg-white shadow px-5 py-4 rounded">
                 <h5 class="fs-4 fw-bolder mb-4">Check Room Availability</h5>
                 <form action="">
-                    <div class="row align-items-end">
+                    <div class="row align-items-end d-flex justify-content-evenly">
                         <div class="col-lg-2 mb-3">
                             <label class="form-label fw-bold">Location</label>
                             <select id="select_location" class="form-control shadow-none">

@@ -10,6 +10,10 @@ html {
   font-family: "Merienda", cursive;
 }
 
+body{
+  background-color: rgba(227, 223, 230, 0.589);
+}
+
 /*---- Hide number arrows: ------*/
 
 /* For chrome, Safari, Edge, Opera */
