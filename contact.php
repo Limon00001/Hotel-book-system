@@ -82,7 +82,7 @@
                         <label class="form-label" style="font-weight: 500">Message</label>
                         <textarea class="form-control shadow-none" rows="5" style="resize: none"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-dark text-white text-uppercase mt-3">Send</button>
+                    <button type="submit" class="btn btn-dark text-white text-uppercase mt-3 shadow-none">Send</button>
                 </form>
             </div>
         </div>

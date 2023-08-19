@@ -25,8 +25,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<style>
-</style>
 
 <body>
 
@@ -52,18 +50,6 @@
                         <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="filterDropdown">
                             <div class="border bg-light p-3 rounded mb-3">
                                 <h5 class="mb-3 text-uppercase" style="font-size: 18px">Check Availability</h5>
-                                <label class="form-label fw-bold">Location</label>
-                                <select id="select_location" class="form-control shadow-none mb-3">
-                                    <option value="">Select Location...</option>
-                                    <option value="dhaka">Dhaka</option>
-                                    <option value="chittagong">Chittagong</option>
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="cox">Cox's Bazar</option>
-                                    <option value="khulna">Khulna</option>
-                                    <option value="rajshahi">Rajshahi</option>
-                                    <option value="bandarban">Bandarban</option>
-                                    <option value="st">Saint Martins</option>
-                                </select>
                                 <label class="form-label">Check-in</label>
                                 <input type="date" class="form-control shadow-none mb-3">
                                 <label class="form-label">Check-out</label>
@@ -138,7 +124,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">$2.5 per night</h6>
+                            <h6 class="mb-4">৳300 Per Night</h6>
                             <a href="#" class="btn btn-sm w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                         </div>
@@ -172,7 +158,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">$2.5 per night</h6>
+                            <h6 class="mb-4">৳300 Per Night</h6>
                             <a href="#" class="btn btn-sm w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                         </div>
@@ -206,7 +192,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">$2.5 per night</h6>
+                            <h6 class="mb-4">৳300 Per Night</h6>
                             <a href="#" class="btn btn-sm w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                         </div>
