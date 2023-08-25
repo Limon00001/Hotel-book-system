@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to Hotel</title>
+    <title>Independent Paradise -  Home</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
@@ -77,25 +77,11 @@
                 <h5 class="fs-4 fw-bolder mb-4">Check Room Availability</h5>
                 <form action="">
                     <div class="row align-items-end d-flex justify-content-evenly">
-                        <div class="col-lg-2 mb-3">
-                            <label class="form-label fw-bold">Location</label>
-                            <select id="select_location" class="form-control shadow-none">
-                                <option value="">Select Location...</option>
-                                <option value="dhaka">Dhaka</option>
-                                <option value="chittagong">Chittagong</option>
-                                <option value="sylhet">Sylhet</option>
-                                <option value="cox">Cox's Bazar</option>
-                                <option value="khulna">Khulna</option>
-                                <option value="rajshahi">Rajshahi</option>
-                                <option value="bandarban">Bandarban</option>
-                                <option value="st">Saint Martins</option>
-                            </select>
-                        </div>
-                        <div class="col-lg-3 mb-3">
+                        <div class="col-lg-4 mb-3">
                             <label class="form-label fw-bold">Check-In</label>
                             <input type="date" class="form-control shadow-none">
                         </div>
-                        <div class="col-lg-3 mb-3">
+                        <div class="col-lg-4 mb-3">
                             <label class="form-label fw-bold">Check-Out</label>
                             <input type="date" class="form-control shadow-none">
                         </div>
@@ -286,7 +272,7 @@
                 </div>
             </div>
             <div class="col-lg-12 text-center mt-5">
-                <a href="#" class="btn px-2 py-2 btn-outline-dark rounded fw-bold">More Rooms</a>
+                <a href="rooms.php" class="btn px-2 py-2 btn-outline-dark rounded fw-bold">More Rooms</a>
             </div>
         </div>
     </div>

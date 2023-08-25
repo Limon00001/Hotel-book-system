@@ -25,8 +25,6 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<style>
-</style>
 
 <body>
 
@@ -51,6 +49,7 @@
                         </button>
                         <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="filterDropdown">
                             <div class="border bg-light p-3 rounded mb-3">
+<<<<<<< HEAD
                                 <h5 class="mb-3 text-uppercase fw-bold" style="font-size: 18px">Check Availability</h5>
                                 <label class="form-label fw-bold">Location</label>
                                 <select id="select_location" class="form-control shadow-none mb-3">
@@ -65,6 +64,10 @@
                                     <option value="st">Saint Martins</option>
                                 </select>
                                 <label class="form-label fw-bold">Check-in</label>
+=======
+                                <h5 class="mb-3 text-uppercase" style="font-size: 18px">Check Availability</h5>
+                                <label class="form-label">Check-in</label>
+>>>>>>> bedd164cac454ddc62c6110351301502e69d84f6
                                 <input type="date" class="form-control shadow-none mb-3">
                                 <label class="form-label fw-bold">Check-out</label>
                                 <input type="date" class="form-control shadow-none">
@@ -138,7 +141,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">$2.5 per night</h6>
+                            <h6 class="mb-4">৳300 Per Night</h6>
                             <a href="#" class="btn btn-sm w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                         </div>
@@ -172,7 +175,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">$2.5 per night</h6>
+                            <h6 class="mb-4">৳300 Per Night</h6>
                             <a href="#" class="btn btn-sm w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                         </div>
@@ -206,7 +209,7 @@
                             </div>
                         </div>
                         <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                            <h6 class="mb-4">$2.5 per night</h6>
+                            <h6 class="mb-4">৳300 Per Night</h6>
                             <a href="#" class="btn btn-sm w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                         </div>
