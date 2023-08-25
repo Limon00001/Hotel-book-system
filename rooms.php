@@ -51,7 +51,7 @@
                         </button>
                         <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="filterDropdown">
                             <div class="border bg-light p-3 rounded mb-3">
-                                <h5 class="mb-3 text-uppercase" style="font-size: 18px">Check Availability</h5>
+                                <h5 class="mb-3 text-uppercase fw-bold" style="font-size: 18px">Check Availability</h5>
                                 <label class="form-label fw-bold">Location</label>
                                 <select id="select_location" class="form-control shadow-none mb-3">
                                     <option value="">Select Location...</option>
@@ -64,9 +64,9 @@
                                     <option value="bandarban">Bandarban</option>
                                     <option value="st">Saint Martins</option>
                                 </select>
-                                <label class="form-label">Check-in</label>
+                                <label class="form-label fw-bold">Check-in</label>
                                 <input type="date" class="form-control shadow-none mb-3">
-                                <label class="form-label">Check-out</label>
+                                <label class="form-label fw-bold">Check-out</label>
                                 <input type="date" class="form-control shadow-none">
                             </div>
                             <div class="border bg-light p-3 rounded mb-3">

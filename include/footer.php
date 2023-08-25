@@ -1,7 +1,7 @@
 <div class="container-fluid bg-white mt-5 px-5 py-2">
     <div class="row">
         <div class="col-lg-6 p-4">
-            <h3 class="h-font fw-bold fs-3 mb-2">Hotel Book</h3>
+            <h3 class="h-font fw-bold fs-3 mb-2">BookMyStay</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis quis ipsam asperiores laudantium
                 fugiat, beatae, earum repellat atque temporibus dolorem laboriosam, maxime obcaecati esse neque
                 ratione quos eos necessitatibus eaque rem.</p>
