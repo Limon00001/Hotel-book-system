@@ -49,25 +49,10 @@
                         </button>
                         <div class="collapse navbar-collapse flex-column align-items-stretch mt-2" id="filterDropdown">
                             <div class="border bg-light p-3 rounded mb-3">
-<<<<<<< HEAD
-                                <h5 class="mb-3 text-uppercase fw-bold" style="font-size: 18px">Check Availability</h5>
-                                <label class="form-label fw-bold">Location</label>
-                                <select id="select_location" class="form-control shadow-none mb-3">
-                                    <option value="">Select Location...</option>
-                                    <option value="dhaka">Dhaka</option>
-                                    <option value="chittagong">Chittagong</option>
-                                    <option value="sylhet">Sylhet</option>
-                                    <option value="cox">Cox's Bazar</option>
-                                    <option value="khulna">Khulna</option>
-                                    <option value="rajshahi">Rajshahi</option>
-                                    <option value="bandarban">Bandarban</option>
-                                    <option value="st">Saint Martins</option>
-                                </select>
-                                <label class="form-label fw-bold">Check-in</label>
-=======
+
+
                                 <h5 class="mb-3 text-uppercase" style="font-size: 18px">Check Availability</h5>
                                 <label class="form-label">Check-in</label>
->>>>>>> bedd164cac454ddc62c6110351301502e69d84f6
                                 <input type="date" class="form-control shadow-none mb-3">
                                 <label class="form-label fw-bold">Check-out</label>
                                 <input type="date" class="form-control shadow-none">

@@ -1,8 +1,8 @@
 <?php
 
-// require('./include/essentials.php');
-// require('./include/db_config.php');
-// adminLogin();
+require('./include/essentials.php');
+require('./include/db_config.php');
+adminLogin();
 
 ?>
 
@@ -16,9 +16,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -50,8 +48,7 @@
                 <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body">
                         <div class="text-end mb-4">
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
-                                data-bs-target="#add-room">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#add-room">
                                 <i class="fa-solid fa-plus me-2"></i>Add
                             </button>
                         </div>
@@ -78,8 +75,7 @@
     </div>
 
     <!-- Popup -->
-    <div class="modal fade" id="add-room" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="add-room" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg">
             <form id="add_room_form" method="post" autocomplete="off">
                 <div class="modal-content">
@@ -132,8 +128,7 @@
                             </div>
                             <div class="col-12 mb-3">
                                 <label class="form-label fw-bold">Description</label>
-                                <textarea name="desc" rows="6" class="form-control shadow-none" style="resize: none"
-                                    required></textarea>
+                                <textarea name="desc" rows="6" class="form-control shadow-none" style="resize: none" required></textarea>
                             </div>
                         </div>
                     </div>
@@ -148,16 +143,12 @@
 
 
     <!-- Bootstrap JS -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
-        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
     <script>
         let add_room_form = document.getElementById(`add_room_form`);
 
-        add_room_form.addEventListener('submit', function (e) {
+        add_room_form.addEventListener('submit', function(e) {
             e.preventDefault();
             add_room();
         });
@@ -177,13 +168,12 @@
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/rooms.php", true);
 
-            xhr.onload = function () {
+            xhr.onload = function() {
                 if (this.responseText == 1) {
                     alert('success', 'New room added!');
                     add_room_form.reset();
                     get_all_rooms();
-                }
-                else {
+                } else {
                     alert('error', 'Server Down!');
                 }
             }
@@ -197,14 +187,14 @@
             xhr.open("POST", "ajax/rooms.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-            xhr.onload = function () {
+            xhr.onload = function() {
                 document.getElementById('room-data').innerHTML = this.responseText;
             }
 
             xhr.send('get_all_rooms');
         }
 
-        window.onload = function () {
+        window.onload = function() {
             get_all_rooms();
         }
 
@@ -214,12 +204,11 @@
             xhr.open("POST", "ajax/rooms.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-            xhr.onload = function () {
+            xhr.onload = function() {
                 if (this.responseText == 1) {
                     alert('success', 'Status toggled!');
                     get_all_rooms();
-                }
-                else {
+                } else {
                     alert('success', 'Server odwn!');
                 }
             }
@@ -227,10 +216,9 @@
             xhr.send('toggle_status=' + id + '$value=' + val);
         }
 
-        window.onload = function () {
+        window.onload = function() {
             get_all_rooms();
         }
-
     </script>
 </body>
 

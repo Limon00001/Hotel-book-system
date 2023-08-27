@@ -1,10 +1,6 @@
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 px-sm-2 py-sm-2 shadow">
         <div class="container-fluid">
-<<<<<<< HEAD
-            <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">BookMyStay</a>
-=======
             <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Independent Paradise</a>
->>>>>>> bedd164cac454ddc62c6110351301502e69d84f6
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
