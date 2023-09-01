@@ -5,6 +5,7 @@ html {
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+
 }
 .h-font {
   font-family: "Merienda", cursive;
@@ -31,5 +32,19 @@ input[type="number"] {
   .roomAvailable {
     margin-top: 20px;
     padding: 0 2rem;
+  }
+}
+
+#dashboard-menu{
+  position: fixed;
+  height: 100vh;
+}
+@media screen and (max-width: 991px){
+  #dashboard-menu{
+    height: auto;
+    width: 100vw;
+  }
+  #main-content{
+    margin-top: 60px;
   }
 }

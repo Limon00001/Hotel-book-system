@@ -39,3 +39,9 @@ input[type="number"] {
       padding: 0 2rem;
   }
 }
+
+.custom-alert{
+  position: fixed;
+  top: 80px;
+  right: 25px;
+}

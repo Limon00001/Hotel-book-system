@@ -1,3 +1,12 @@
+<?php 
+require('admin/include/essentials.php');
+require('admin/include/db_config.php');
+    // $contact_q = "SELECT * FROM `contact_details` WHERE `sr_no`=?";
+    // $values = [1];
+    // $contact_r = mysqli_fetch_assoc(select($contact_q, $values, 'i'));
+?>
+
+
 <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-white px-lg-3 py-lg-2 px-sm-2 py-sm-2 shadow">
         <div class="container-fluid">
             <a class="navbar-brand me-5 fw-bold fs-3 h-font" href="index.php">Independent Paradise</a>
