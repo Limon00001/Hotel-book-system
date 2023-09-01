@@ -105,10 +105,7 @@ if(isset($_POST['submit']))
     --bold: 700;
   }
 
-html,body{
-    /* background-color: var(--veryDarkBlue); */
-    /* color: var(--white); */
-}
+
 
 .des{
     /* font-size: var(--bodyCopy); */
