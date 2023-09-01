@@ -132,13 +132,13 @@
                         <div class="card mb-4 border-0 shadow">
                             <div class="row g-0 p-3 align-items-center">
                                 <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
-                                    <!-- You can add your room image here -->
-                                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="img-fluid rounded" alt="...">
+                                    
+                                    <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=970&q=80" class="img-fluid rounded" alt="...">
                                 </div>
-                                <div class="col-md-5 px-lg-3 px-md-3 px-0">
-                                    <h5 class="mb-3"><?php echo $roomName; ?></h5>
+                                <div class="col-md-5 px-lg-5 px-md-3 px-0">
+                                    <h5 class="mb-4 fs-2"><?php echo $roomName; ?></h5>
                                     <div class="mb-3">
-                                        <h6 class="mb-1">Features</h6>
+                                        <h6 class="mb-1 fs-5">Features</h6>
                                         <?php
                                         foreach ($features as $feature) {
                                             echo '<span class="badge rounded-pill bg-light text-dark text-wrap">' . $feature . '</span>';
@@ -146,7 +146,7 @@
                                         ?>
                                     </div>
                                     <div class="mb-3">
-                                        <h6 class="mb-1">Facilities</h6>
+                                        <h6 class="mb-1 fs-5">Facilities</h6>
                                         <?php
                                         foreach ($facilities as $facility) {
                                             echo '<span class="badge rounded-pill bg-light text-dark text-wrap">' . $facility . '</span>';
@@ -154,7 +154,7 @@
                                         ?>
                                     </div>
                                     <div>
-                                        <h6 class="mb-1">Guests</h6>
+                                        <h6 class="mb-1 fs-5">Guests</h6>
                                         <span class="badge rounded-pill bg-light text-dark text-wrap"><?php echo $adults; ?> Adults</span>
                                         <span class="badge rounded-pill bg-light text-dark text-wrap"><?php echo $children; ?> Children</span>
                                     </div>
@@ -163,7 +163,7 @@
                                     <h6 class="mb-4">৳<?php echo $price; ?> Per Night</h6>
                                     <!-- Add booking and more details buttons here -->
                                     <a href="#" class="btn btn-sm w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
-                                    <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
+                                    <a href="rate.php" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                                 </div>
                             </div>
                         </div>
@@ -176,7 +176,7 @@
                 ?>
 
 
-                <div class="card mb-4 border-0 shadow">
+                <!-- <div class="card mb-4 border-0 shadow">
                     <div class="row g-0 p-3 align-items-center">
                         <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
                             <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" class="img-fluid rounded" alt="...">
@@ -209,7 +209,7 @@
                             <a href="#" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
             </div>
         </div>
