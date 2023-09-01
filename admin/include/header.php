@@ -19,9 +19,7 @@
                     <li class="nav-item">
                         <a class="nav-link text-light" href="rooms.php">Rooms</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-light" href="features_facilities.php">Features & Facilities</a>
-                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link text-light" href="user_messages.php">User Messages</a>
                     </li>

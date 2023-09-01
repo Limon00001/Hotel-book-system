@@ -40,40 +40,40 @@
 
 
 
-    if(isset($_POST['login']))
-    {
-        $data = filteration($_POST);
-        $em = $data['email_mob'];
+    // if(isset($_POST['login']))
+    // {
+    //     $data = filteration($_POST);
+    //     $em = $data['email_mob'];
         
     
-        $query = "SELECT * FROM `user_cred` WHERE `email` = '$em' OR `phonenum` = $em LIMIT 1";
-        $result = mysqli_query($con, $query);
+    //     $query = "SELECT * FROM `user_cred` WHERE `email` = '$em' OR `phonenum` = $em LIMIT 1";
+    //     $result = mysqli_query($con, $query);
 
-        if(mysqli_num_rows($result) == 0){
-            echo 'inv_email_mob';
-        }
-        else {
-            $u_fetch = mysqli_fetch_assoc($result);
-            if($u_fetch['is_verified'] == 0){
-                echo 'not_verified';
-            }
-            else if($u_fetch['status'] == 0){
-                echo 'inactive';
-            }
-            else {
-                if(!password_verify($data['pass'], $u_fetch['password'])){
-                    echo 'invalid_pass';
-                }
-                else {
-                    session_start();
-                    $_SESSION['login'] = true;
-                    $_SESSION['uId'] = $u_fetch['id'];
-                    $_SESSION['uName'] = $u_fetch['name'];
-                    $_SESSION['uPhone'] = $u_fetch['phonenum'];
-                    echo 1;
-                }
-            }
-        }
-    }
+    //     if(mysqli_num_rows($result) == 0){
+    //         echo 'inv_email_mob';
+    //     }
+    //     else {
+    //         $u_fetch = mysqli_fetch_assoc($result);
+    //         if($u_fetch['is_verified'] == 0){
+    //             echo 'not_verified';
+    //         }
+    //         else if($u_fetch['status'] == 0){
+    //             echo 'inactive';
+    //         }
+    //         else {
+    //             if(!password_verify($data['pass'], $u_fetch['password'])){
+    //                 echo 'invalid_pass';
+    //             }
+    //             else {
+    //                 session_start();
+    //                 $_SESSION['login'] = true;
+    //                 $_SESSION['uId'] = $u_fetch['id'];
+    //                 $_SESSION['uName'] = $u_fetch['name'];
+    //                 $_SESSION['uPhone'] = $u_fetch['phonenum'];
+    //                 echo 1;
+    //             }
+    //         }
+    //     }
+    // }
 
 ?>
