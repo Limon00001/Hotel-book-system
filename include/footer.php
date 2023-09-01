@@ -46,7 +46,6 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script>
-
     let login_form = document.getElementById('login-form');
     login_form.addEventListener('submit', (e) => {
         e.preventDefault();
@@ -63,20 +62,20 @@
         modal.hide();
 
         let xhr = new XMLHttpRequest();
-        xhr.open("POST", "../ajax/login_register.php", true);
+        xhr.open("POST", "./ajax/login_register.php", true);
 
         xhr.onload = function(){
             if(this.responseText == 'inv_email_mob'){
-                alert('error', "Invalid Email!");
+                alert("error! Invalid Email!");
             }
             else if(this.responseText == 'not_verified'){
-                alert('error', "Email not verified!");
+                alert("error! Email not verified!");
             }
             else if(this.responseText == 'inactive'){
-                alert('error', "Account Suspended!");
+                alert("error! Account Suspended!");
             }
             else if(this.responseText == 'invalid_pass'){
-                alert('error', "Incorrect Password!");
+                alert("error! Incorrect Password!");
             }
             else {
                 window.location = window.location.pathname;

@@ -43,14 +43,17 @@
     if(isset($_POST['login']))
     {
         $data = filteration($_POST);
+        $em = $data['email_mob'];
+        
+    
+        $query = "SELECT * FROM `user_cred` WHERE `email` = '$em' OR `phonenum` = $em LIMIT 1";
+        $result = mysqli_query($con, $query);
 
-        $u_exist = select("SELECT * FROM `user_cred` WHERE `email` = ? LIMIT 1", [$data['email_mob']], "s");
-
-        if(mysqli_num_rows($u_exist) == 0){
+        if(mysqli_num_rows($result) == 0){
             echo 'inv_email_mob';
         }
         else {
-            $u_fetch = mysqli_fetch_assoc($u_exist);
+            $u_fetch = mysqli_fetch_assoc($result);
             if($u_fetch['is_verified'] == 0){
                 echo 'not_verified';
             }

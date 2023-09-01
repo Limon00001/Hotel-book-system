@@ -77,16 +77,16 @@
                 <h5 class="fs-4 fw-bolder mb-4">Check Room Availability</h5>
                 <form action="">
                     <div class="row align-items-end d-flex justify-content-evenly">
-                        <div class="col-lg-4 mb-3">
+                        <div class="col-lg-3 mb-3">
                             <label class="form-label fw-bold">Check-In</label>
                             <input type="date" class="form-control shadow-none">
                         </div>
-                        <div class="col-lg-4 mb-3">
+                        <div class="col-lg-3 mb-3">
                             <label class="form-label fw-bold">Check-Out</label>
                             <input type="date" class="form-control shadow-none">
                         </div>
 
-                        <div class="col-lg-1 mb-3">
+                        <div class="col-lg-2 mb-3">
                             <label class="form-label fw-bold">Adult</label>
                             <select class="form-select shadow-none">
                                 <option value="1">1</option>
@@ -94,7 +94,7 @@
                                 <option value="3">3</option>
                             </select>
                         </div>
-                        <div class="col-lg-1 mb-3">
+                        <div class="col-lg-2 mb-3">
                             <label class="form-label fw-bold">Children</label>
                             <select class="form-select shadow-none">
                                 <option value="1">1</option>

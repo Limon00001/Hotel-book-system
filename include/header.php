@@ -137,16 +137,20 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-      	            <?php if (isset($_SESSION['login']) && $_SESSION['login']==true) {
-                        echo<<<data
-                            <button type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none">
-                                $_SESSION[uName]
-                            </button>
-                            <a href='logout.php' type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none">
-                                Logout
-                            </a>
-                        data;
-                    } ?>
+      	            <?php 
+                    session_start();
+                    print_r($_SESSION);
+                    // if (isset($_SESSION['login']) && $_SESSION['login']==true) {
+                    //     echo<<<data
+                    //         <button type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none">
+                    //             $_SESSION[uName]
+                    //         </button>
+                    //         <a href='logout.php' type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none">
+                    //             Logout
+                    //         </a>
+                    //     data;
+                    // } 
+                    ?>
                         <button type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none" data-bs-toggle="modal" data-bs-target="#loginModal">
                             Login
                         </button>
@@ -172,7 +176,7 @@
                     </div>
                     <div class="modal-body">
                         <div class="mb-3">
-                            <label class="form-label">Email address</label>
+                            <label class="form-label">Email / Mobile </label>
                             <input name="email_mob" type="text" class="form-control shadow-none" required>
                         </div>
                         <div class="mb-3">

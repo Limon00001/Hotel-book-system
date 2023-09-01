@@ -129,7 +129,7 @@
                         $price = $row['price'];
                 ?>
 
-                        <div class="card mb-4 border-0 shadow">
+                        <div class="card mb-4 ms-5 me-5 border-0 shadow">
                             <div class="row g-0 p-3 align-items-center">
                                 <div class="col-md-5 mb-lg-0 mb-md-0 mb-3">
                                     
@@ -160,10 +160,10 @@
                                     </div>
                                 </div>
                                 <div class="col-md-2 mt-lg-0 mt-md-0 mt-4 text-center">
-                                    <h6 class="mb-4">৳<?php echo $price; ?> Per Night</h6>
-                                    <!-- Add booking and more details buttons here -->
-                                    <a href="#" class="btn btn-sm w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
-                                    <a href="rate.php" class="btn btn-sm w-100 btn-outline-dark shadow-none">More Details</a>
+                                    <h6 class="mb-4 fs-4">৳<?php echo $price; ?> Per Night</h6>
+                                    
+                                    <a href="#" class="btn w-100 text-white bg-dark shadow-none mb-2">Book Now</a>
+                                    <a href="rate.php" class="btn  w-100 btn-outline-dark shadow-none">More Details</a>
                                 </div>
                             </div>
                         </div>
