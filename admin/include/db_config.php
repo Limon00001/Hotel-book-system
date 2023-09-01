@@ -2,7 +2,7 @@
 
 $hname = 'localhost';
 $uname = 'root';
-$pass = '';
+$pass = '1234';
 $db = 'hbwebsite';
 
 $con = mysqli_connect($hname, $uname, $pass, $db);
@@ -15,7 +15,7 @@ if (!$con){
 // data filter function
 function filteration($data){
     foreach($data as $key => $value){
-        $data[$key] = trim($value);                      // remove extra spaces from input field
+        $data[$key] = trim($value);                     // remove extra spaces from input field
         $data[$key] = stripslashes($value);             // remove back slashes
         $data[$key] = htmlspecialchars($value);         // convet special chars (<, >, etc.) to html entity
         $data[$key] = strip_tags($value);               // remove html tag
@@ -43,6 +43,3 @@ function select($sql, $values, $datatypes)
         die("Query cannot be executed - Select");
     }
 }
-
-
-?>
