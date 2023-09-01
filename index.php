@@ -103,7 +103,7 @@
                             </select>
                         </div>
                         <div class="col-lg-1 mb-lg-3">
-                            <button type="submit" class="btn btn-outline-dark shadow-none custom-btn">Submit</button>
+                            <a type="submit" href="rooms.php" class="btn btn-outline-dark shadow-none custom-btn">Submit</a>
                         </div>
                     </div>
                 </form>
