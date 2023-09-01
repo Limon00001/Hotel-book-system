@@ -10,7 +10,7 @@ html {
   font-family: "Merienda", cursive;
 }
 
-body{
+body {
   background-color: rgba(227, 223, 230, 0.589);
 }
 
@@ -27,15 +27,39 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
-.roomAvailable{
-  margin-top: -40px;
+.roomAvailable {
+  margin-top: -80px;
   position: relative;
   z-index: 2;
 }
 
-@media screen and (max-width:600px) {
-  .roomAvailable{
-      margin-top: 20px;
-      padding: 0 2rem;
+.custom-alert {
+  position: fixed;
+  top: 88px;
+  right: 25px;
+  z-index: 111;
+}
+
+.registration-form {
+  background: #f7f7f7;
+  padding: 20px;
+  border: 1px solid orange;
+  margin: 50px 0px;
+}
+
+.err-msg {
+  color: red;
+}
+
+.registration-form form {
+  border: 1px solid #e8e8e8;
+  padding: 10px;
+  background: #f3f3f3;
+}
+
+@media screen and (max-width: 600px) {
+  .roomAvailable {
+    margin-top: 20px;
+    padding: 0 2rem;
   }
 }

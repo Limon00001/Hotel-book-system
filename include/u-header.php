@@ -1,66 +1,8 @@
 <?php
 
-    session_start();
     require ('./admin/include/db_config.php');
     require ('./admin/include/essentials.php');
-    // require ('./login.php');
-
-
-
-    // // login
-    // if (isset($_POST['email_mob']) && isset($_POST['pass'])) {
-    
-    //     function validate($data){
-    //        $data = trim($data);
-    //        $data = stripslashes($data);
-    //        $data = htmlspecialchars($data);
-    //        return $data;
-    //     }
-    
-    //     $email = validate($_POST['email_mob']);
-    //     $pass = validate($_POST['pass']);
-    
-    //     if (empty($email)) {
-    //         header("Location: index.php?error=User Name is required");
-    //         exit();
-    //     }else if(empty($pass)){
-    //         header("Location: index.php?error=Password is required");
-    //         exit();
-    //     }else{
-    
-    //         // Hashing the password
-    //         $password = md5($pass);
-    
-    //         $sql = "SELECT * FROM user_cred WHERE email='$email' AND password='$password'";
-    //         $result = mysqli_query($con, $sql);
-    
-    //         if (mysqli_num_rows($result) === 1) {
-    //             $row = mysqli_fetch_assoc($result);
-    //             if ($row['email'] === $email && $row['password'] === $password) {
-    //                 $_SESSION['email'] = $row['email'];
-    //                 $_SESSION['name'] = $row['name'];
-    //                 $_SESSION['id'] = $row['id'];
-    //                 // $_SESSION['status'] = $row['status'];
-    
-    //                 header("Location: include/header.php");
-    //                 // exit();
-    //             }else{
-    //                 alert('error', 'Incorrect username or password');
-    //                 // header("Location: index.php?error=Incorect User name or password");
-    //                 // exit();
-    //             }
-    //         }else{
-    //             alert('error', 'Incorrect username or password');
-    //             // header("Location: index.php?error=Incorrect User name or password");
-    //             // exit();
-    //         }
-    //     }
-    // }else{
-    //     alert('success', 'Successful');
-    //     // exit();
-    // }
-
-
+    session_start();
 
 
  
@@ -107,9 +49,11 @@
     // End Registration
 
 
-    
-    // if(!isset($_SESSION['id']) && !isset($_SESSION['email']))
+
+    // if(isset($_SESSION['logged_in']) && $_SESSION['logged_in'] == true)
     // {
+    //     header("location: ./index.php");
+    // }
 
     ?>
 
@@ -137,22 +81,20 @@
                     </li>
                 </ul>
                 <form class="d-flex" role="search">
-      	            <?php if (isset($_SESSION['login']) && $_SESSION['login']==true) {
-                        echo<<<data
+                    <?php
+                        // session_start();
+                        if(isset($_SESSION['id']) && isset($_SESSION['email'] ) )
+                        {
+                        ?>
                             <button type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none">
-                                $_SESSION[uName]
+                                <?php echo $_SESSION['email']; ?>
                             </button>
-                            <a href='logout.php' type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none">
-                                Logout
-                            </a>
-                        data;
-                    } ?>
-                        <button type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none" data-bs-toggle="modal" data-bs-target="#loginModal">
-                            Login
-                        </button>
-                        <button type="button" class="btn btn-outline-dark me-lg-3 me-2 shadow-none" data-bs-toggle="modal" data-bs-target="#regModal">
-                            Register
-                        </button>
+                    <?php
+                        }
+                        else {
+                            header('location: header.php');
+                        }
+                    ?>
                 </form>
             </div>
         </div>
@@ -173,7 +115,7 @@
                     <div class="modal-body">
                         <div class="mb-3">
                             <label class="form-label">Email address</label>
-                            <input name="email_mob" type="text" class="form-control shadow-none" required>
+                            <input name="email_mob" type="email" class="form-control shadow-none" required>
                         </div>
                         <div class="mb-3">
                             <label class="form-label">Password</label>
@@ -249,17 +191,6 @@
     </div>
 
 
-    <?php 
-    
-        // }else {
-        //     alert('error', 'Login failed - Invalid Credentials!');
-        //     header("Location: ./index.php");
-        //     exit();
-        // }
-    ?>
-
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
-
