@@ -59,7 +59,7 @@ if(isset($_POST['get_all_rooms']))
                         Adult: $row[adult]
                     </span><br>
                     <span class='badge rounded-pill bg-light text-dark'>
-                        Adult: $row[children]
+                        Child: $row[children]
                     </span>
                 </td>
                 <td>৳$row[price]</td>

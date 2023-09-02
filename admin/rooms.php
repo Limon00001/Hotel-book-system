@@ -16,7 +16,9 @@ adminLogin();
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -36,7 +38,7 @@ adminLogin();
 <body class="bg-light">
 
     <?php
-        require('./include/header.php');
+    require('./include/header.php');
     ?>
 
     <div class="container-fluid" id="main-content">
@@ -48,7 +50,8 @@ adminLogin();
                 <div class="card border-0 shadow-sm mb-4">
                     <div class="card-body">
                         <div class="text-end mb-4">
-                            <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#add-room">
+                            <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                data-bs-target="#add-room">
                                 <i class="fa fa-solid fa-plus me-1"></i>Add
                             </button>
                         </div>
@@ -80,7 +83,8 @@ adminLogin();
 
 
     <!-- Add Room popup -->
-    <div class="modal fade" id="add-room" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="add-room" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <form id="add_room_form" method="POST" autocomplete="off">
                 <div class="modal-content">
@@ -168,7 +172,8 @@ adminLogin();
 
 
     <!-- Edit Room popup -->
-    <div class="modal fade" id="edit-room" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="edit-room" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <form id="edit_room_form" method="POST" autocomplete="off">
                 <div class="modal-content">
@@ -252,13 +257,12 @@ adminLogin();
     <script>
         let add_room_form = document.getElementById(`add_room_form`);
 
-        add_room_form.addEventListener('submit', function(e) {
+        add_room_form.addEventListener('submit', function (e) {
             e.preventDefault();
             add_room();
         });
 
-        function add_room() 
-        {
+        function add_room() {
             let data = new FormData();
             data.append('add_room', '');
             data.append('name', add_room_form.elements['name'].value);
@@ -273,7 +277,7 @@ adminLogin();
 
             add_room_form.elements['features'].forEach(el => {
                 if (el.checked) {
-                    
+
                     features.push(el.value);
                 }
             });
@@ -282,7 +286,7 @@ adminLogin();
 
             add_room_form.elements['facilities'].forEach(el => {
                 if (el.checked) {
-                    
+
                     facilities.push(el.value);
                 }
             });
@@ -292,18 +296,12 @@ adminLogin();
             let xhr = new XMLHttpRequest();
             xhr.open("POST", "ajax/rooms.php", true);
 
-            xhr.onload = function() {
+            xhr.onload = function () {
                 let myModal = document.getElementById('add-room');
                 let modal = bootstrap.Modal.getInstance(myModal);
                 modal.hide();
+
                 
-                // if (this.responseText == 1) {
-                //     alert('success', 'New room added!');
-                //     add_room_form.reset();
-                //     get_all_rooms();
-                // } else {
-                //     alert('error', 'Server Down!');
-                // }
             }
 
             xhr.send(data);
@@ -315,83 +313,16 @@ adminLogin();
             xhr.open("POST", "ajax/rooms.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-            xhr.onload = function() {
+            xhr.onload = function () {
                 document.getElementById('room-data').innerHTML = this.responseText;
             }
 
             xhr.send('get_all_rooms');
         }
 
-        window.onload = function() {
+        window.onload = function () {
             get_all_rooms();
         }
-
-
-
-        // let edit_room_form = document.getElementById('edit_room_form');
-
-        // function edit_details(id) {
-        //     let xhr = new XMLHttpRequest();
-        //     xhr.open("POST", "ajax/rooms.php", true);
-        //     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-        //     xhr.onload = function() {
-        //         let data = JSON.parse(this.responseText);
-        //         edit_room_form.elements['name'].value = data.roomdata.name;
-        //         edit_room_form.elements['area'].value = data.roomdata.area;
-        //         edit_room_form.elements['price'].value = data.roomdata.price;
-        //         edit_room_form.elements['quantity'].value = data.roomdata.quantity;
-        //         edit_room_form.elements['adult'].value = data.roomdata.adult;
-        //         edit_room_form.elements['children'].value = data.roomdata.children;
-        //         edit_room_form.elements['desc'].value = data.roomdata.description;
-        //         edit_room_form.elements['room_id'].value = data.roomdata.id;
-        //     }
-
-        //     xhr.send('get_room' + id);
-        // }
-
-
-
-        // edit_room_form.addEventListener('submit', function(e) {
-        //     e.preventDefault();
-        //     submit_edit_room();
-        // });
-
-
-
-        // function submit_edit_room() {
-        //     let data = new FormData();
-        //     data.append('edit_room', '');
-        //     data.append('room_id', edit_room_form.elements['room_id'].value);
-        //     data.append('name', edit_room_form.elements['name'].value);
-        //     data.append('area', edit_room_form.elements['area'].value);
-        //     data.append('price', edit_room_form.elements['price'].value);
-        //     data.append('quantity', edit_room_form.elements['quantity'].value);
-        //     data.append('adult', edit_room_form.elements['adult'].value);
-        //     data.append('children', add_room_form.elements['children'].value);
-        //     data.append('desc', edit_room_form.elements['desc'].value);
-
-
-        //     let xhr = new XMLHttpRequest();
-        //     xhr.open("POST", "ajax/rooms.php", true);
-
-        //     xhr.onload = function() {
-        //         let myModal = document.getElementById('edit-room');
-        //         let modal = bootstrap.Modal.getInstance(myModal);
-        //         modal.hide();
-
-        //         if (this.responseText == 1) {
-        //             alert('success', 'Room Data Edited Successfully!');
-        //             edit_room_form.reset();
-        //             get_all_rooms();
-        //         } else {
-        //             alert('error', 'Server Down!');
-        //         }
-        //     }
-
-        //     xhr.send(data);
-        // };
-
 
 
 
@@ -400,7 +331,7 @@ adminLogin();
             xhr.open("POST", "ajax/rooms.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-            xhr.onload = function() {
+            xhr.onload = function () {
                 if (this.responseText == 1) {
                     alert('success! Status toggled!');
                     get_all_rooms();
@@ -412,7 +343,7 @@ adminLogin();
             xhr.send('toggle_status=' + id + '&value=' + val);
         }
 
-        window.onload = function() {
+        window.onload = function () {
             get_all_rooms();
         }
     </script>
@@ -420,8 +351,12 @@ adminLogin();
 
     <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+        integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+        crossorigin="anonymous"></script>
 
 </body>
 

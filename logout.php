@@ -1,12 +1,6 @@
 <?php
-
-require('admin/include/essentials.php');
 session_start();
-
-// Unset all of the session variables
-$_SESSION = array();
 session_destroy();
-header("location: index.php");
+header('Location: index.php'); // Redirect to your homepage after logout
 exit;
-
 ?>
